@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Feb  5 15:16:25 2021
+Changed on Sat Feb  6 01:33:16 2021
 
 @author: newave986.git
 """
@@ -32,14 +33,14 @@ y_train = train_label['label']
 from xgboost import XGBClassifier
 from sklearn.model_selection import RandomizedSearchCV
 
-xgb_wrapper = XGBClassifier(n_estimators=400, learning_rate=0.1, max_depth=6) # max_depth=6임을 찾았으므로 이제는 계속 6으로 둔다.
+xgb_wrapper = XGBClassifier(n_estimators=400, learning_rate=0.3, max_depth=3, min_child_weight=5)
 xgb_wrapper.fit(X_train, y_train)
 
 w_preds = xgb_wrapper.predict(X_test)
 w_pred_proba = xgb_wrapper.predict_proba(X_test)[:, 1]
 
 random_grid = {
- 'gamma':[i/10.0 for i in range(0,5)]
+ 'gamma':[i/10.0 for i in range(0,9)]
 }
 
 xgb_random = RandomizedSearchCV(xgb_wrapper, param_distributions = random_grid, cv=5, n_jobs=1)
