@@ -33,15 +33,15 @@ y_train = train_label['label']
 from xgboost import XGBClassifier
 from sklearn.model_selection import RandomizedSearchCV
 
-xgb_wrapper = XGBClassifier(n_estimators=400, learning_rate=0.1, max_depth=5)
+xgb_wrapper = XGBClassifier(n_estimators=400, learning_rate=0.3, max_depth=5)
 xgb_wrapper.fit(X_train, y_train)
 
 w_preds = xgb_wrapper.predict(X_test)
 w_pred_proba = xgb_wrapper.predict_proba(X_test)[:, 1]
 
 random_grid = {
- 'max_depth':range(3,10,3),
- 'min_child_weight':range(1,6,2)
+ 'max_depth':range(3,7),
+ 'min_child_weight':range(1, 7)
 }
 
 xgb_random = RandomizedSearchCV(xgb_wrapper, param_distributions = random_grid, cv=2, n_jobs=1)
