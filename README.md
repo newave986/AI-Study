@@ -14,3 +14,23 @@ xgboost_feature_plus_iqr.py
 
 -> 0.9124154083로 개선
 
+
+* 하이퍼 파라미터 튜닝
+
+https://callicse.blogspot.com/2021/02/dacon-06-02-12-xgboost.html
+https://callicse.blogspot.com/2021/02/dacon-235689-07-02-21.html
+
+xgboost_find_parameter.py
+xgboost_find_gamma.py
+xgboost_find_subsample_colsamplebytree.py
+
+-> 0.8640695542로 개선
+
+
+* Aggregation 수정
+
+https://callicse.blogspot.com/2021/02/dacon-235689-08-02-21-aggregation.html
+
+xgboost_aggregationplus.py
+
+-> 0.7441774442로 개선
