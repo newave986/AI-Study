@@ -1,36 +1,40 @@
-데이콘 동작 분류 AI 경진대회
-https://dacon.io/competitions/official/235689/overview/
-
-공부/학습 목적으로 참여한 첫 AI 경진대회입니다.
-자세한 사고의 흐름은 블로그에 작성되어 있습니다.
+Dacon Motion Classification AI Competition
+=============
+https://dacon.io/competitions/official/235689/overview/ </br></br>
 
 
-* Groupy Agg에 IQR 사용하기
+My first AI competiton to study and train my Machine Learning </br>
 
-https://callicse.blogspot.com/2021/02/05-02-12-dacon-235689-groupy-agg-iqr.html
-
-lightgbm_feature_plus_iqr_final.py
-xgboost_feature_plus_iqr.py
-
--> 0.9124154083로 개선
+- **Machine Learning** Random Forest, LightGBM, XGBoost
+- Aggregation Tuning and Hyperparameter Tuning with XGBoost
 
 
-* 하이퍼 파라미터 튜닝
+Plus IQR into Groupby Aggregation
+-------------
+[🌊](https://callicse.blogspot.com/2021/02/05-02-12-dacon-235689-groupy-agg-iqr.html) </br>
 
-https://callicse.blogspot.com/2021/02/dacon-06-02-12-xgboost.html
-https://callicse.blogspot.com/2021/02/dacon-235689-07-02-21.html
+lightgbm_feature_plus_iqr_final.py </br>
+xgboost_feature_plus_iqr.py </br>
 
-xgboost_find_parameter.py
-xgboost_find_gamma.py
-xgboost_find_subsample_colsamplebytree.py
-
--> 0.8640695542로 개선
+-> Improved: 0.9124154083
 
 
-* Aggregation 수정
+Hyperparameter Tuning
+-------------
+[🌊](https://callicse.blogspot.com/2021/02/dacon-06-02-12-xgboost.html)[🌊](https://callicse.blogspot.com/2021/02/dacon-235689-07-02-21.html)
+ </br>
 
-https://callicse.blogspot.com/2021/02/dacon-235689-08-02-21-aggregation.html
+xgboost_find_parameter.py </br>
+xgboost_find_gamma.py </br> 
+xgboost_find_subsample_colsamplebytree.py </br>
 
-xgboost_aggregationplus.py
+-> Improved: 0.8640695542
 
--> 0.7441774442로 개선
+
+Modify Aggragation Again
+-------------
+[🌊](https://callicse.blogspot.com/2021/02/dacon-235689-08-02-21-aggregation.html) </br>
+
+xgboost_aggregationplus.py  </br>
+
+-> Improved: 0.7441774442
